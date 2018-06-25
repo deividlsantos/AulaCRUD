@@ -22,6 +22,7 @@
                     <label class="control-label" for="nome">Nome: </label>
                     <input value="${nomePesquisado}" class="form-control" name="nome" id="nome" type="text" />
                 </div>
+                    <span>${msg}</span>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit" id="btnAtualizar">Atualizar</button>
                     <button onclick="parent.location.href='ManterAlunoServlet?acao=novo'" class="btn btn-primary" type="button" id="btnNovo">Novo</button>
@@ -38,7 +39,7 @@
                         <tr>
                             <td class="col-xs-2">
                                 <a href="ManterAlunoServlet?acao=editar&id=${aluno.id}"><img src="imagens/editar.jpeg" /></a>
-                                <a href="ManterAlunoServlet?acao=excluir&id=${aluno.id}"><img src="imagens/excluir.jpeg" /></a>
+                                <a href="ManterAlunoServlet?acao=excluir&id=${aluno.id}" onclick="javascript:return('Excluido com sucesso!')"> <img src="imagens/excluir.jpeg" /></a>
                             </td>
                             <td class="col-xs-4">${aluno.nome}</td>
                             <td class="col-xs-6">${aluno.idade}</td>

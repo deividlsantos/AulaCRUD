@@ -21,13 +21,12 @@
                 <div class="form-group">
                     <label class="control-label" for="idade">Idade: </label>
                     <input value="${aluno.idade}" class="form-control" name="idade" 
-                           id="idade" type="text" required />
+                           id="idade" type="text" required pattern="\d+" />
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit" id="btnAtualizar">Salvar</button>
                 </div>
-            </form>
         </div>
         <script type='text/javascript' src='<%= org.webjars.AssetLocator.getWebJarPath("jquery.min.js")%>'></script>
         <script type='text/javascript' src='<%= org.webjars.AssetLocator.getWebJarPath("js/bootstrap.min.js")%>'></script>
